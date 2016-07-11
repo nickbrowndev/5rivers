@@ -1,0 +1,15 @@
+List of TODO Items
+==================
+M = Must, S = Should, C = Could, W = Won't
+[ ] = Not started, [\] = In progress, [X] = Complete
+
+Functional
+==========
+
+Non-Functional
+==============
+S [ ] Create and add a favourite item
+C [ ] Configure compression of additional files (e.g. CSS, JS)
+
+Coding
+======
