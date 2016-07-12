@@ -1,0 +1,2 @@
+git clone ssh://57842c500c1e66e61700002e@squash-5rivers.rhcloud.com/~/git/squash.git/
+cd squash/
