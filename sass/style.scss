@@ -1,9 +1,20 @@
+@import "../node_modules/bootstrap/dist/css";
+
+$font-stack:   Roboto, "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px $font-stack;
   color: #F0B80F;
 }
 
-a {
-  color: #00B7FF;
-}
+/* header {*/
+  nav {
+    @extend .navbar;
+    @extend .navbar-fixed-top;
+    @extend .navbar-dark;
+    @extend .bg-inverse;
+    color: red;
+  }
+/*}*/

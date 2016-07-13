@@ -5,6 +5,17 @@ M = Must, S = Should, C = Could, W = Won't
 
 Functional
 ==========
+M [ ] View club contact information page
+S [ ] View Facebook news feed integration
+S [ ] View Player lists from Hampshire Squash Website
+S [ ] View Team league results
+S [ ] View Team list
+S [ ] Add team
+S [ ] View Sponsors details page
+S [ ] View upcoming events
+S [ ] Add upcoming event
+S [ ] Upload internal league results (excel)
+S [ ] View internal league results
 
 Non-Functional
 ==============
@@ -13,3 +24,11 @@ C [ ] Configure compression of additional files (e.g. CSS, JS)
 
 Coding
 ======
+
+
+
+Inspirations
+============
+
+http://www.duffieldsquashclub.co.uk/
+http://www.cambridgesquashclub.co.uk/
