@@ -24,7 +24,8 @@ C [ ] Configure compression of additional files (e.g. CSS, JS)
 
 Coding
 ======
-
+S [ ] Review nesting of items in style.scss
+S [X] Remove non-semantic bootstrap classes from content
 
 
 Inspirations

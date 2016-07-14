@@ -1,4 +1,4 @@
-/* @import "../node_modules/bootstrap/dist/css";*/
+ @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 $font-stack:   Roboto, "Lucida Grande", Helvetica, Arial, sans-serif;
 
@@ -9,12 +9,43 @@ body {
   color: #F0B80F;
 }
 
-/* header {*/
+header {
   nav {
     @extend .navbar;
     @extend .navbar-fixed-top;
     @extend .navbar-dark;
     @extend .bg-inverse;
     color: red;
+
+    a#title {
+      @extend .navbar-brand;
+    }
+
+    button#menu {
+      @extend .navbar-toggler;
+      @extend .hidden-sm-up;
+    }
+
+    #collapsingNavbar {
+      @extend .collapse;
+      @extend .navbar-toggleable-xs;
+
+      ul {
+        @extend .nav;
+        @extend .navbar-nav;
+
+        li {
+          @extend .nav-item;
+
+          a {
+            @extend .nav-link;
+
+            #activeMarker {
+              @extend .sr-only;
+            }
+          }
+        }
+      }
+    }
   }
-/*}*/
+}

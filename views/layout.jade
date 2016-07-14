@@ -4,29 +4,29 @@ html
     title= title
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     link(rel="stylesheet", href="/css/normalize.css")
-    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    <!--link(rel="stylesheet", href="/css/bootstrap.min.css") -->
     link(rel='stylesheet', href='/style.css')
 
   body
     header
-      nav tetetetetet
-        a(class="navbar-brand" href="#") #{title}
-        button(class="navbar-toggler hidden-sm-up", type="button", data-toggle="collapse", data-target="#exCollapsingNavbar2") &#9776;
-        div(class="collapse navbar-toggleable-xs", id="exCollapsingNavbar2")
-          ul(class="nav navbar-nav")
-            li(class="nav-item active")
-              a(class="nav-link", href="#") News
-                span(class="sr-only") (current)
-            li(class="nav-item")
-              a(class="nav-link" href="#") Teams
-            li(class="nav-item")
-              a(class="nav-link" href="#") Leagues
-            li(class="nav-item")
-              a(class="nav-link" href="#") Players
-            li(class="nav-item")
-              a(class="nav-link" href="#") Sponsors
-            li(class="nav-item")
-              a(class="nav-link" href="#") Achievementss
+      nav
+        a(id="title" href="#") #{title}
+        button(id="menu", type="button", data-toggle="collapse", data-target="#collapsingNavbar") &#9776;
+        div(id="collapsingNavbar")
+          ul
+            li(class="active")
+              a(href="#") News
+                span(id="activeMarker") (current)
+            li
+              a(href="#") Teams
+            li
+              a(href="#") Leagues
+            li
+              a(href="#") Players
+            li
+              a(href="#") Sponsors
+            li
+              a(href="#") Achievements
     block content
     script(src="/js/jquery.min.js")
     script(src="/js/bootstrap.min.js")
