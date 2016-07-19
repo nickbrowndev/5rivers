@@ -4,13 +4,12 @@ html
     title= title
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     link(rel="stylesheet", href="/css/normalize.css")
-    <!--link(rel="stylesheet", href="/css/bootstrap.min.css") -->
-    link(rel='stylesheet', href='/style.css')
+    link(rel='stylesheet', href='/css/style.css')
 
   body
     header
       nav
-        a(id="title" href="#") #{title}
+        a(id="title" href="/") #{title}
         button(id="menu", type="button", data-toggle="collapse", data-target="#collapsingNavbar") &#9776;
         div(id="collapsingNavbar")
           ul
@@ -27,6 +26,9 @@ html
               a(href="#") Sponsors
             li
               a(href="#") Achievements
+            li
+              a(href="devforum") Development Forum
     block content
     script(src="/js/jquery.min.js")
+    script(src="/js/tether.min.js")
     script(src="/js/bootstrap.min.js")

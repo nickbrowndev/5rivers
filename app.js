@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var devForum = require('./routes/devforum');
 var health = require('./routes/health');
 
 var app = express();
@@ -25,14 +25,16 @@ app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'sass'),
   dest: path.join(__dirname, 'public/css'),
   sourceMap: true,
-  prefix: 'stylesheets',
+  prefix: '/css'
 }));
-express.static(path.join(__dirname, 'public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
-app.use('/users', users);
+app.use('/devforum', devForum);
 app.use('/health', health);
 app.use('/css', express.static(__dirname + '/node_modules/normalize.css')); // redirect Normalize.CSS
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+app.use('/js', express.static(__dirname + '/node_modules/tether/dist/js')); // redirect JS tether
+app.use('/css', express.static(__dirname + '/node_modules/tether/dist/css')); // redirect CSS tether
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 
