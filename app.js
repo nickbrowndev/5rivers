@@ -5,9 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
+var news = require('./routes/news');
 var devForum = require('./routes/devforum');
 var health = require('./routes/health');
+var clubInfo = require('./routes/club');
+var teamInfo = require('./routes/teams');
 
 var app = express();
 
@@ -28,7 +30,9 @@ app.use(require('node-sass-middleware')({
   prefix: '/css'
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', routes);
+app.use('/', news);
+app.use('/teams', teamInfo);
+app.use('/club', clubInfo);
 app.use('/devforum', devForum);
 app.use('/health', health);
 app.use('/css', express.static(__dirname + '/node_modules/normalize.css')); // redirect Normalize.CSS
